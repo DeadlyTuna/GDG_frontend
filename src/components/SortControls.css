@@ -1,0 +1,67 @@
+/* SortControls Styles */
+.sort-controls {
+  padding: var(--spacing-lg);
+}
+
+.sort-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.sort-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.sort-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: var(--color-bg-secondary);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: left;
+  transition: all var(--transition-base);
+}
+
+.sort-button:hover {
+  background: var(--color-bg-tertiary);
+  border-color: var(--color-accent-primary);
+  color: var(--color-text-primary);
+  transform: translateX(4px);
+}
+
+.sort-button.active {
+  background: var(--color-accent-gradient);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+.sort-button svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .sort-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sort-button {
+    flex: 1;
+    min-width: 150px;
+    justify-content: center;
+  }
+
+  .sort-button:hover {
+    transform: translateY(-2px);
+  }
+}

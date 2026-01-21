@@ -1,17 +1,25 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 
-export function useDebounce(value, delay) {
-    const [debouncedValue, setDebouncedValue] = useState(value);
+/**
+ * Custom hook for debouncing values
+ * @param {any} value - The value to debounce
+ * @param {number} delay - Delay in milliseconds (default: 500ms)
+ * @returns {any} - Debounced value
+ */
+export function useDebounce(value, delay = 500) {
+    const [debouncedValue, setDebouncedValue] = useState(value)
 
     useEffect(() => {
+        // Set up the timeout
         const handler = setTimeout(() => {
-            setDebouncedValue(value);
-        }, delay);
+            setDebouncedValue(value)
+        }, delay)
 
+        // Cleanup function - cancel timeout if value changes before delay
         return () => {
-            clearTimeout(handler);
-        };
-    }, [value, delay]);
+            clearTimeout(handler)
+        }
+    }, [value, delay])
 
-    return debouncedValue;
+    return debouncedValue
 }

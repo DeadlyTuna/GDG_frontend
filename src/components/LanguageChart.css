@@ -1,0 +1,34 @@
+/* LanguageChart Styles */
+.language-chart {
+  padding: var(--spacing-lg);
+}
+
+.chart-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.chart-container {
+  position: relative;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .chart-container {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .language-chart {
+    padding: var(--spacing-md);
+  }
+
+  .chart-container {
+    max-width: 250px;
+  }
+}
