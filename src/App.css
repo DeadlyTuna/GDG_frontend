@@ -7,12 +7,15 @@
 
 .app-header {
   background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border);
   padding: var(--spacing-lg) 0;
   position: sticky;
   top: 0;
   z-index: 100;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .header-content {
@@ -53,12 +56,16 @@
   margin-bottom: var(--spacing-2xl);
 }
 
+.search-section + .org-section {
+  animation: fadeIn 0.4s ease-out;
+}
+
 .org-section {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
 }
 
 .controls-section {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
 }
 
 .controls-grid {

@@ -2,11 +2,12 @@
 .repo-list-container {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-2xl);
 }
 
 .repo-grid {
   animation: fadeIn var(--transition-base) ease-out;
+  gap: var(--spacing-xl)!important;
 }
 
 .empty-state {

@@ -1,20 +1,21 @@
 /* RepoCard Styles */
 .repo-card {
-  padding: var(--spacing-lg);
+  padding: var(--spacing-xl);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-  transition: all var(--transition-base);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   text-decoration: none;
   color: inherit;
   height: 100%;
+  position: relative;
 }
 
 .repo-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-  border-color: var(--color-text-muted);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--color-border);
+  border-color: var(--color-link);
 }
 
 .repo-card-header {
@@ -25,11 +26,16 @@
 }
 
 .repo-name {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-link);
   margin: 0;
   word-break: break-word;
+  line-height: 1.4;
+}
+
+.repo-card:hover .repo-name {
+  color: var(--color-link-hover);
 }
 
 .repo-language {

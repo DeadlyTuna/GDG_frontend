@@ -31,11 +31,17 @@
   border-radius: var(--radius-md);
   color: var(--color-text-primary);
   font-size: 1rem;
+  transition: all 0.2s ease;
 }
 
 .search-input:focus {
   border-color: var(--color-link);
-  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+  background: var(--color-bg-secondary);
+}
+
+.search-input::placeholder {
+  color: var(--color-text-muted);
 }
 
 .search-input:disabled {

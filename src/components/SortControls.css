@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  padding: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
@@ -28,21 +28,22 @@
   font-size: 0.875rem;
   font-weight: 500;
   text-align: left;
-  transition: all var(--transition-base);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sort-button:hover {
   background: var(--color-bg-tertiary);
   border-color: var(--color-text-muted);
   color: var(--color-text-primary);
-  transform: translateX(4px);
+  transform: translateX(2px);
 }
 
 .sort-button.active {
   background: var(--color-accent-primary);
   border-color: var(--color-accent-primary);
   color: white;
-  box-shadow: 0 0 0 3px rgba(35, 134, 54, 0.3);
+  box-shadow: 0 0 0 3px rgba(35, 134, 54, 0.2);
+  transform: translateX(0);
 }
 
 .sort-button svg {
