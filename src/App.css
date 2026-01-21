@@ -28,6 +28,16 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
+  transition: opacity 0.2s ease;
+  user-select: none;
+}
+
+.logo-section:hover {
+  opacity: 0.8;
+}
+
+.logo-section:active {
+  opacity: 0.6;
 }
 
 .logo-icon {

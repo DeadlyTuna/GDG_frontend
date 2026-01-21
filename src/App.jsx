@@ -10,12 +10,17 @@ import { Github } from 'lucide-react'
 import './App.css'
 
 function App() {
-    const { currentOrg, loadFromCache } = useGitHubStore()
+    const { currentOrg, loadFromCache, reset } = useGitHubStore()
 
     useEffect(() => {
         // Load cached data on mount
         loadFromCache()
     }, [loadFromCache])
+
+    const handleLogoClick = () => {
+        reset()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
 
     return (
         <div className="app">
@@ -23,7 +28,7 @@ function App() {
             <header className="app-header">
                 <div className="container">
                     <div className="header-content">
-                        <div className="logo-section">
+                        <div className="logo-section" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
                             <Github size={40} className="logo-icon" />
                             <div>
                                 <h1 className="gradient-text">GitHub Dashboard</h1>
