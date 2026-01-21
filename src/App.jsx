@@ -5,6 +5,7 @@ import OrgHeader from './components/OrgHeader'
 import SortControls from './components/SortControls'
 import RepoList from './components/RepoList'
 import LanguageChart from './components/LanguageChart'
+import BackToTop from './components/BackToTop'
 import { Github } from 'lucide-react'
 import './App.css'
 
@@ -77,6 +78,9 @@ function App() {
                     </p>
                 </div>
             </footer>
+
+            {/* Back to Top Button */}
+            <BackToTop />
         </div>
     )
 }
