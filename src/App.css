@@ -57,6 +57,51 @@
   margin: 0;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.new-repo-btn,
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 8px;
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.new-repo-btn:hover,
+.profile-btn:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+.new-repo-btn:active,
+.profile-btn:active {
+  transform: translateY(0);
+}
+
+.profile-btn.active {
+  background: rgba(99, 102, 241, 0.3);
+  border-color: rgba(99, 102, 241, 0.6);
+}
+
+.new-repo-btn svg,
+.profile-btn svg {
+  flex-shrink: 0;
+}
+
 .main-content {
   flex: 1;
   padding: var(--spacing-xl) 0;
@@ -126,5 +171,19 @@
   .logo-icon {
     width: 32px;
     height: 32px;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .new-repo-btn span,
+  .profile-btn span {
+    display: none;
+  }
+
+  .new-repo-btn,
+  .profile-btn {
+    padding: 0.625rem;
   }
 }
